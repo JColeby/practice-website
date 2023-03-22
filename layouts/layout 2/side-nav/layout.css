@@ -1,0 +1,304 @@
+body{
+    display: grid;
+    grid-template-rows: 80px 300px 1fr auto auto 1fr 200px ;
+    grid-template-columns: 150px 1fr 1fr 1fr;
+    grid-template-areas:
+        " nav head head head" 
+        " nav s1 s1 s1 "
+        " nav s2 s2 s2 "
+        " nav s3 s3 s3 "
+        " nav s4 s4 s4 "
+        " nav s5 s5 s5 "
+        " nav ft ft ft "
+    ;
+    margin: 0;
+    padding: 0;
+
+
+    background-image: url(Background.png);
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#head{
+    grid-area: head;
+    background-color: aquamarine;
+}
+
+#nav{
+    grid-area: nav;
+    background-color: #eee;
+    z-index: 4;
+}
+
+#s1{
+    grid-area: s1;
+    
+}
+
+#s2{
+    grid-area: s2;
+}
+
+#s3{
+    grid-area: s3;
+}
+
+#s4{
+    grid-area: s4;
+}
+
+#s5{
+    grid-area: s5;
+}
+
+#footer{
+    grid-area: ft;
+    background-color:#ddd;
+}
+
+
+.section{
+    padding: 10px 5%;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+/*header styles*/
+#head{
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 10px 0 #000000bb;
+    height: 80px;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.search-wrapper{
+    border-width: 0px 0px 0px 70px;
+    border-style: solid;
+    border-image: linear-gradient( to left, #eee, rgba(0, 0, 0, 0) ) 1 100%;
+}
+
+.search{
+   height: 80px; 
+   width: 270px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color:#eee ;
+   
+}
+
+
+
+.search > .search-bar > input{
+    width: 180px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    height:30px;
+    margin:0 15px;
+}
+
+
+/*nav styles*/
+
+
+.logo{
+    width:calc(100% - 20px);
+    padding:10px;
+    height:80px;
+}
+
+
+
+
+
+
+#nav{
+    position:fixed;
+    width:150px;
+    height:100vh;
+    border-right: 1px solid black;
+    box-shadow: 0 0 10px 0 #000000bb;
+}
+
+
+#nav > hr{
+    margin: 0px 5px;
+    border-top: 1px solid white;
+    
+}
+
+#nav > .nav-links{
+    padding: 15px;
+}
+
+
+/*footer styles*/
+
+#footer{
+    border-top: 1px solid black;
+    box-shadow: 0 0 10px 0 #000000bb;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+/*card styles*/
+
+.card-and-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-and-text > .side-text{
+    width: 500px;
+}
+
+.card-and-text > .side-img{
+    width:400px;
+    height: 450px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 0 #000000bb;;
+}
+
+.card-and-text > .side-text > h2{
+    margin-left: 15px;
+}
+
+@media (min-width: 1500px) {
+    .card-and-text{
+        width: 1150px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .card-and-text > .side-text{
+        width: 60%;
+    }
+
+    .card-and-text > .side-img {
+        width: 30%;
+        height: 350px;
+    }
+}
+
+
+
+
+
+
+
+
+/*card img and text styes*/
+
+#s3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.img-text-sourounding{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-and-text-box{
+    width: 85%;
+    height: 85%;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 0 #000000bb;
+    font-size: 1rem;
+    transition: .5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.img-and-text-box > .img-top{
+    width: 100%;
+    height: 70%;
+    
+}
+
+.img-and-text-box > .img-top > img{
+    border-radius: 10px 10px 0 0;
+}
+
+.img-and-text-box > .text-bottom{
+    width: 100%;
+    height: 30%;
+    background-color: #eee;
+    border-radius: 0 0 10px 10px;
+}
+
+.img-and-text-box > .text-bottom > p{
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+
+.img-and-text-box:hover {
+    font-size: 1.1rem;
+    width: 93.5%;
+    height: 93.5%;
+}
+
+
+
+.img-main{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-box{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.img-link{ 
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+  }  

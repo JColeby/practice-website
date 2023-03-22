@@ -1,0 +1,54 @@
+body{
+    display: grid;
+    
+    grid-template-rows: 200px 7% 1fr 1fr 1fr 7%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "nav . s1 s1 s1 ."
+        "nav . s2 s2 s2 ."
+        "nav . s3 s3 s3 ."
+        "nav . s4 s4 s4 ."
+        "nav . s5 s5 s5 ."
+        "nav ft ft ft ft ft"
+    ;
+}
+
+
+body nav, body div, body footer{
+    background-color:#ddd;
+    padding: 20px;
+}
+
+body div{
+    margin: 20px;
+    height:300px;
+}
+
+#nav{
+    grid-area: nav;
+}
+
+.s1{
+    grid-area: s1;
+}
+
+.s2{
+    grid-area: s2;
+}
+
+.s3{
+    grid-area: s3;
+}
+
+.s4{
+    grid-area: s4;
+}
+
+.s5{
+    grid-area: s5;
+}
+
+#footer{
+    grid-area: ft;
+    background-color:#ddd;
+}
