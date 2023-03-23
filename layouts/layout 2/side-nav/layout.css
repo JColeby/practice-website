@@ -179,9 +179,6 @@ body{
 }
 
 
-
-
-
 /*footer styles*/
 
 #footer{
@@ -219,6 +216,8 @@ body{
     filter: opacity(0.9) brightness(1);
     scale: 0.95;
     transition: 0.75s ease;
+    transition-delay: 0.1s;
+
 }
 
 .card-and-text > .side-img:hover{
@@ -281,8 +280,9 @@ body{
     border-radius: 10px;
     box-shadow: 3px 3px 15px 0 #000000bb;
     font-size: 1rem;
-    transition: .5s;
-
+    
+    transition: .5s ease;
+    transition-delay: 0.05s;
     display: flex;
     align-items: center;
     justify-content: center;
