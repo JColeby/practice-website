@@ -218,6 +218,7 @@ body{
     margin-top: 135px;
     z-index: 6;
     opacity: 0;
+    cursor: pointer;
 }
 
 #nav input:hover ~ .nav-link-wrapper .dropdown{
