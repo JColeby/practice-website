@@ -1,6 +1,6 @@
 body{
     display: grid;
-    grid-template-rows: 80px 300px 1fr auto auto 1fr 200px ;
+    grid-template-rows: 100px 300px 1fr auto auto 1fr auto ;
     grid-template-columns: 125px 1fr 1fr 1fr;
     grid-template-areas:
         " nav head head head" 
@@ -156,7 +156,8 @@ body{
 
 #nav > .nav-link-wrapper{
     padding: 15px;
-    
+    display: block;
+    position: absolute;
 }
 
 .nav-link-wrapper > .link-nav{
@@ -167,6 +168,7 @@ body{
     flex-direction: column;
     margin: 15px 0;
     transition: .15s;
+    text-align: center;
 }
 
 .nav-link-wrapper i{
@@ -199,7 +201,7 @@ body{
    transform-origin: 0% 0%;
    transform: translate(-100%, 0);
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-   margin-top: -718px;
+   width: 95px;
    background-color: #e7e7e7;
    z-index: 5;
    padding-bottom: 500px !important;
@@ -245,9 +247,26 @@ body{
     border-top: 1px solid black;
     box-shadow: 0 0 10px 0 #000000bb;
     z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
+#footer > div{
+    width:350px;
+    text-align: center;
+}
 
+#footer div h6{
+    font-size: 1.3em;
+    margin: 30px 5px;
+}
+
+#footer div h6 i{
+    font-size: 1.5em;
+}
 
 
 
