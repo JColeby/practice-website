@@ -439,4 +439,25 @@ body{
         grid-template-rows: 80px 300px 1fr auto auto 1fr 200px ;
         grid-template-columns: 80px 1fr 1fr 1fr;
     }
+
+    .drop-menu{
+        width: 50px;
+    }
+    .nav-link-wrapper{
+        width: 50px;
+    }
+    .link-nav{
+        width: 50px;
+    }
+    #nav input{
+        width: 80px;
+        height: 80px;
+    }
+    .nav-link-wrapper p{
+        font-size: 1em;
+    }
+
+    .logo{
+        height: 60px;
+    }
   }
