@@ -276,6 +276,14 @@ body{
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 3px 3px 15px 0 #000000bb;;
+    filter: opacity(0.9) brightness(1);
+    scale: 0.95;
+    transition: 0.75s ease;
+}
+
+.card-and-text > .side-img:hover{
+    filter: opacity(1) brightness(1.1);
+    scale: 1.05;
 }
 
 .card-and-text > .side-text > h2{
@@ -350,6 +358,7 @@ body{
 
 .img-and-text-box > .img-top > img{
     border-radius: 10px 10px 0 0;
+    filter: opacity(0.9) brightness(0.8);
 }
 
 .img-and-text-box > .text-bottom{
@@ -371,6 +380,7 @@ body{
     font-size: 1.1rem;
     width: 93.5%;
     height: 93.5%;
+    filter: opacity(1) brightness(1.2);
 }
 
 
@@ -387,7 +397,6 @@ body{
     height: 100%;
     object-fit: cover;
 }
-
 
 .img-link{ 
     position:absolute; 
