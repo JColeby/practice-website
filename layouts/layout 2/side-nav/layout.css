@@ -1,7 +1,7 @@
 body{
     display: grid;
     grid-template-rows: 80px 300px 1fr auto auto 1fr 200px ;
-    grid-template-columns: 150px 1fr 1fr 1fr;
+    grid-template-columns: 125px 1fr 1fr 1fr;
     grid-template-areas:
         " nav head head head" 
         " nav s1 s1 s1 "
@@ -141,7 +141,7 @@ body{
 
 #nav{
     position:fixed;
-    width:150px;
+    width:125px;
     height:100vh;
     border-right: 1px solid black;
     box-shadow: 0 0 10px 0 #000000bb;
@@ -165,19 +165,79 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 5px;
+    margin: 15px 0;
+    transition: .15s;
 }
 
+.nav-link-wrapper i{
+    font-size: 3em;
+    margin-bottom:5px;
+}
+
+
 .nav-link-wrapper img{
-    width:80px;
-    height:80px;
+    width: 80px;
+    height: 80px;
     
 }
 
 .nav-link-wrapper p{
     margin-top: 3px;
+    font-size: 1.2em;
 }
 
+.nav-link-wrapper > .link-nav:hover{
+    color:#777777
+}
+
+
+.main-menu{
+    transition:.5s ;
+}
+
+.drop-menu{
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   margin-top: -718px;
+   background-color: #e7e7e7;
+   z-index: 5;
+   padding-bottom: 500px !important;
+   -webkit-font-smoothing: antialiased;
+}
+
+
+#nav input{
+    display: block;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 135px;
+    z-index: 6;
+    opacity: 0;
+}
+
+#nav input:hover ~ .nav-link-wrapper .dropdown{
+    color: #777777;
+}
+
+#nav input:checked ~ .drop-menu{
+    transform: none;
+}
+
+#nav input:checked ~ .main-menu{
+    opacity:  0;
+}
+
+#nav input:checked{
+    position: fixed;
+    margin:0;
+    width:calc(100vw - 125px);
+    height: 100vh;
+    margin-left: 125px;
+    margin-top: -101px;
+}
 
 
 
