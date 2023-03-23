@@ -76,13 +76,25 @@ body{
 #head{
     border-bottom: 1px solid black;
     box-shadow: 0 0 10px 0 #000000bb;
-    height: 80px;
+    height: 100px;
     width: 100%;
     z-index: 3;
     display: flex;
    align-items: center;
-   justify-content: flex-end;
+   justify-content: space-between;
+   
 }
+
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+    height: 100%;
+}
+
 
 .search-wrapper{
     border-width: 0px 0px 0px 70px;
@@ -91,7 +103,7 @@ body{
 }
 
 .search{
-   height: 80px; 
+   height: 100px; 
    width: 270px;
    display: flex;
    align-items: center;
@@ -142,9 +154,32 @@ body{
     
 }
 
-#nav > .nav-links{
+#nav > .nav-link-wrapper{
     padding: 15px;
+    
 }
+
+.nav-link-wrapper > .link-nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.nav-link-wrapper img{
+    width:80px;
+    height:80px;
+    
+}
+
+.nav-link-wrapper p{
+    margin-top: 3px;
+}
+
+
+
 
 
 /*footer styles*/
