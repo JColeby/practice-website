@@ -460,4 +460,7 @@ body{
     .logo{
         height: 60px;
     }
+    #head{
+        height: 80px;
+    }
   }
